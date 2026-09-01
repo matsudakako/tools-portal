@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>事業推進室 ツールポータル</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --card-bg: #ffffff;
+    --border: #e2e4e8;
+    --text: #1f2430;
+    --sub: #6b7280;
+    --accent: #2f6fed;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px 20px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 22px;
+    margin: 0 0 8px;
+  }
+  .lead {
+    color: var(--sub);
+    font-size: 14px;
+    margin: 0 0 32px;
+  }
+  .card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  a.card {
+    display: block;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  a.card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 10px rgba(47, 111, 237, 0.12);
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .card-desc {
+    font-size: 13px;
+    color: var(--sub);
+  }
+  .card-url {
+    font-size: 12px;
+    color: var(--accent);
+    margin-top: 8px;
+    word-break: break-all;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: var(--accent);
+    margin-left: 8px;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>事業推進室 ツールポータル</h1>
+    <p class="lead">各ツールへのリンク一覧です。ツール本体はここでは動かず、それぞれの本来の場所に移動します。</p>
+    <div class="card-list">
+      <a class="card" href="http://localhost:3000/raw-upload.html" target="_blank" rel="noopener">
+        <div class="card-title">グラフ数値シート・クロス集計表作成ツール<span class="badge">ローカル起動</span></div>
+        <div class="card-desc">アンケートの生データから、グラフ数値シートとクロス集計表を自動作成します。</div>
+        <div class="card-url">localhost:3000/raw-upload.html</div>
+      </a>
+      <a class="card" href="https://graph-tool-production.up.railway.app/" target="_blank" rel="noopener">
+        <div class="card-title">グラフ制作ツール</div>
+        <div class="card-desc">グラフ数値シートをもとに、グラフ画像・ホワイトペーパーを作成します。</div>
+        <div class="card-url">graph-tool-production.up.railway.app</div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
